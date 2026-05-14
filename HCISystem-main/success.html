@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Success</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    }
+    .success-icon {
+      width: 100px;
+      height: 100px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      margin: 0 auto 30px;
+      animation: scaleIn 0.6s ease-out;
+    }
+    @keyframes scaleIn {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    .button-group button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-left">
+    <a href="startup.html" class="logo">ClickWise</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="startup.html#about">About Us</a>
+      <a href="cart.html">Cart</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <input placeholder="Search food...">
+    <a href="cart.html">🛒</a>
+  </div>
+</div>
+
+<!-- Success Container -->
+<div style="padding:60px 40px; max-width:700px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:calc(100vh - 80px);">
+  
+  <!-- Success Icon -->
+  <div class="success-icon">✓</div>
+
+  <!-- Success Message -->
+  <h1 style="font-size:48px; color:#333; margin:0 0 15px 0; text-align:center; font-weight:600;">Order Confirmed</h1>
+  
+  <!-- Subtitle -->
+  <p style="font-size:18px; color:#999; margin:0 0 50px 0; text-align:center; line-height:1.6;">Your order has been placed successfully. You will receive updates on your delivery.</p>
+
+  <!-- Order Details Card -->
+  <div style="background:white; padding:30px; border-radius:8px; width:100%; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin-bottom:40px;">
+    
+    <div style="margin-bottom:25px;">
+      <p style="font-size:14px; color:#999; margin:0 0 8px 0; text-transform:uppercase; letter-spacing:0.5px;">Order Number</p>
+      <h2 id="orderNumber" style="font-size:28px; color:#22c55e; margin:0; font-family:monospace; font-weight:600;">#ORD-001</h2>
+    </div>
+
+    <div style="margin-bottom:25px; padding-bottom:25px; border-bottom:1px solid #eee;">
+      <p style="font-size:14px; color:#999; margin:0 0 8px 0; text-transform:uppercase; letter-spacing:0.5px;">Delivery Time</p>
+      <p style="font-size:18px; color:#333; margin:0; font-weight:500;">30-40 minutes</p>
+    </div>
+
+    <div>
+      <p style="font-size:14px; color:#999; margin:0 0 8px 0; text-transform:uppercase; letter-spacing:0.5px;">Time</p>
+      <p id="orderTime" style="font-size:16px; color:#666; margin:0;">May 4, 2026 - 2:30 PM</p>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="button-group" style="display:flex; flex-direction:column; gap:12px; width:100%;">
+    <button onclick="window.location.href='index.html'" style="padding:18px 30px; background:#22c55e; color:white; border:none; border-radius:8px; cursor:pointer; font-size:18px; font-weight:500; transition:all 0.3s ease;">
+      Continue Shopping
+    </button>
+    
+    <button onclick="window.location.href='startup.html'" style="padding:18px 30px; background:#f0f0f0; color:#333; border:none; border-radius:8px; cursor:pointer; font-size:18px; font-weight:500; transition:all 0.3s ease;">
+      Back Home
+    </button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Generate random order number
+  function generateOrderNumber() {
+    const randomNum = Math.floor(Math.random() * 100000);
+    document.getElementById('orderNumber').textContent = '#ORD-' + String(randomNum).padStart(6, '0');
+  }
+
+  // Set current time
+  function setOrderTime() {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    document.getElementById('orderTime').textContent = now.toLocaleDateString('en-US', options);
+  }
+
+  // Initialize on page load
+  generateOrderNumber();
+  setOrderTime();
+</script>
+</body>
+</html>
