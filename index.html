@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="startup.html" class="logo">ClickWise</a>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="startup.html#about">About Us</a>
+          <a href="cart.html">Cart</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <input placeholder="Search food..." />
+        <a href="cart.html">🛒</a>
+      </div>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="section">
+      <h2>Popular</h2>
+
+      <div class="row-container">
+        <button class="arrow left" onclick="scrollRow(this, -1)">‹</button>
+
+        <div class="grid">
+          <div class="product" onclick="openProductModal('Burger', 120, this)">
+            <img src="Burger.webp" />
+            <h3>Burger</h3>
+            <p>₱120</p>
+          </div>
+          <div class="product" onclick="openProductModal('Pizza', 250, this)">
+            <img src="pizza.jpg" />
+            <h3>Pizza</h3>
+            <p>₱250</p>
+          </div>
+          <div class="product" onclick="openProductModal('Fries', 80, this)">
+            <img src="Fries.webp" />
+            <h3>Fries</h3>
+            <p>₱80</p>
+          </div>
+          <div class="product" onclick="openProductModal('Chicken', 150, this)">
+            <img src="chickentigh.jpg" />
+            <h3>Chicken</h3>
+            <p>₱150</p>
+          </div>
+          <div class="product" onclick="openProductModal('Hotdog', 90, this)">
+            <img src="hotdog.jpeg" />
+            <h3>Hotdog</h3>
+            <p>₱90</p>
+          </div>
+          <div class="product" onclick="openProductModal('Tart', 120, this)">
+            <img src="tart.jpg" />
+            <h3>Tart</h3>
+            <p>₱120</p>
+          </div>
+          <div
+            class="product"
+            onclick="openProductModal('Inihaw na pusit', 250, this)"
+          >
+            <img src="inihawnapusit.jpg" />
+            <h3>Inihaw na pusit</h3>
+            <p>₱250</p>
+          </div>
+          <div class="product" onclick="openProductModal('Bangus', 80, this)">
+            <img src="Bangus.jpg" />
+            <h3>Bangus</h3>
+            <p>₱80</p>
+          </div>
+          <div
+            class="product"
+            onclick="openProductModal('Chicken Pit', 150, this)"
+          >
+            <img src="chickentigh.jpg" />
+            <h3>Chicken Tigh</h3>
+            <p>₱150</p>
+          </div>
+        </div>
+
+        <button class="arrow right" onclick="scrollRow(this, 1)">›</button>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="section">
+      <h2>Drinks</h2>
+
+      <div class="row-container">
+        <button class="arrow left" onclick="scrollRow(this, -1)">‹</button>
+
+        <div class="grid">
+          <div class="product" onclick="openProductModal('Coke', 50, this)">
+            <img src="coke.jpg" />
+            <h3>Coke</h3>
+            <p>₱50</p>
+          </div>
+          <div class="product" onclick="openProductModal('Milk Tea', 90, this)">
+            <img src="milktea.jpg" />
+            <h3>Milk Tea</h3>
+            <p>₱90</p>
+          </div>
+          <div class="product" onclick="openProductModal('Coffee', 80, this)">
+            <img src="coffe.jpg" />
+            <h3>Coffee</h3>
+            <p>₱80</p>
+          </div>
+          <div class="product" onclick="openProductModal('Juice', 70, this)">
+            <img src="juice.jpg" />
+            <h3>Juice</h3>
+            <p>₱70</p>
+          </div>
+          <div class="product" onclick="openProductModal('Shake', 100, this)">
+            <img src="shake.jpg" />
+            <h3>Shake</h3>
+            <p>₱100</p>
+          </div>
+          <div class="product" onclick="openProductModal('Coke', 50, this)">
+            <img src="coke.jpg" />
+            <h3>Coke</h3>
+            <p>₱50</p>
+          </div>
+          <div class="product" onclick="openProductModal('Milk Tea', 90, this)">
+            <img src="milktea.jpg" />
+            <h3>Milk Tea</h3>
+            <p>₱90</p>
+          </div>
+          <div class="product" onclick="openProductModal('Coffee', 80, this)">
+            <img src="coffe.jpg" />
+            <h3>Coffee</h3>
+            <p>₱80</p>
+          </div>
+          <div class="product" onclick="openProductModal('Juice', 70, this)">
+            <img src="juice.jpg" />
+            <h3>Juice</h3>
+            <p>₱70</p>
+          </div>
+          <div class="product" onclick="openProductModal('Shake', 100, this)">
+            <img src="shake.jpg" />
+            <h3>Shake</h3>
+            <p>₱100</p>
+          </div>
+        </div>
+
+        <button class="arrow right" onclick="scrollRow(this, 1)">›</button>
+      </div>
+    </div>
+
+    <!-- ROW 3 (RESTORED)
+    <div class="section">
+      <h2>Desserts</h2>
+
+      <div class="row-container">
+        <button class="arrow left" onclick="scrollRow(this, -1)">‹</button>
+
+        <div class="grid">
+          <div class="product" onclick="openProductModal('Cake', 120, this)">
+            <img src="tart.jpg" />
+            <h3>Cake</h3>
+            <p>₱120</p>
+          </div>
+          <div
+            class="product"
+            onclick="openProductModal('Ice Cream', 70, this)"
+          >
+            <img src="https://via.placeholder.com/300" />
+            <h3>Ice Cream</h3>
+            <p>₱70</p>
+          </div>
+          <div class="product" onclick="openProductModal('Donut', 40, this)">
+            <img src="https://via.placeholder.com/300" />
+            <h3>Donut</h3>
+            <p>₱40</p>
+          </div>
+          <div class="product" onclick="openProductModal('Brownies', 60, this)">
+            <img src="https://via.placeholder.com/300" />
+            <h3>Brownies</h3>
+            <p>₱60</p>
+          </div>
+          <div class="product" onclick="openProductModal('Cookie', 30, this)">
+            <img src="https://via.placeholder.com/300" />
+            <h3>Cookie</h3>
+            <p>₱30</p>
+          </div>
+          <div class="product" onclick="openProductModal('Cake', 120, this)">
+            <img src="tart.jpg" />
+            <h3>Cake</h3>
+            <p>₱120</p>
+          </div>
+          <div
+            class="product"
+            onclick="openProductModal('Ice Cream', 70, this)"
+          >
+            <img src="https://via.placeholder.com/300" />
+            <h3>Ice Cream</h3>
+            <p>₱70</p>
+          </div>
+          <div class="product" onclick="openProductModal('Donut', 40, this)">
+            <img src="https://via.placeholder.com/300" />
+            <h3>Donut</h3>
+            <p>₱40</p>
+          </div>
+          <div class="product" onclick="openProductModal('Brownies', 60, this)">
+            <img src="https://via.placeholder.com/300" />
+            <h3>Brownies</h3>
+            <p>₱60</p>
+          </div>
+          <div class="product" onclick="openProductModal('Cookie', 30, this)">
+            <img src="https://via.placeholder.com/300" />
+            <h3>Cookie</h3>
+            <p>₱30</p>
+          </div>
+        </div>
+
+        <button class="arrow right" onclick="scrollRow(this, 1)">›</button>
+      </div>
+    </div> -->
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal" onclick="closeProductModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-body">
+          <img id="modalProductImage" src="" alt="product" />
+          <h2 id="modalProductName"></h2>
+          <p id="modalProductPrice"></p>
+        </div>
+        <div class="modal-controls">
+          <div class="quantity-selector">
+            <button class="qty-btn" onclick="decreaseModalQty()">−</button>
+            <span id="modalQty">1</span>
+            <button class="qty-btn" onclick="increaseModalQty()">+</button>
+          </div>
+          <button class="add-btn" onclick="addModalProductToCart()">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
